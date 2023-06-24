@@ -26,7 +26,7 @@ ProductClass = get_model('catalogue', 'ProductClass')
 
 class EnterpriseServiceMockMixin:
     """
-    Mocks for the Open edX service 'Enterprise Service' responses.
+    Mocks for the Open My OpenedX Platform Nameservice 'Enterprise Service' responses.
     """
     ENTERPRISE_CUSTOMER_URL = '{}enterprise-customer/'.format(
         settings.ENTERPRISE_API_URL,

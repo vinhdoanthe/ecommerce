@@ -212,7 +212,7 @@ class CouponRedeemView(EdxOrderPlacementMixin, APIView):
                 template_name,
                 {
                     'error': _('This coupon is not valid for purchasing a program. Try using this on an individual '
-                               'course in the program. If you need assistance, contact edX support.')
+                               'course in the program. If you need assistance, contact My OpenedX Platform Namesupport.')
                 }
             )
 

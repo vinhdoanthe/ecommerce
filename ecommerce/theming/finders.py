@@ -3,7 +3,7 @@ Static file finders for Django.
 https://docs.djangoproject.com/en/1.8/ref/settings/#std:setting-STATICFILES_FINDERS
 Yes, this interface is private and undocumented, but we need to access it anyway.
 
-In order to deploy Open edX in production, it's important to be able to collect
+In order to deploy Open My OpenedX Platform Namein production, it's important to be able to collect
 and process static assets: images, CSS, JS, fonts, etc. Django's collectstatic
 system is the accepted way to do that in Django-based projects, but that system
 doesn't handle every kind of collection and processing that web developers need.

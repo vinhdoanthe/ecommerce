@@ -1,4 +1,4 @@
-REFUND_ORDER_EMAIL_SUBJECT = 'Your New edX Access Code'
+REFUND_ORDER_EMAIL_SUBJECT = 'Your New My OpenedX Platform NameAccess Code'
 REFUND_ORDER_EMAIL_GREETING = 'Hello! We see you unenrolled from a course provided by your organization within edX’s ' \
                               'refund window. As part of our policy, we are giving you a new code to use. You can ' \
                               'use this to enroll in any course that was available for you to enroll in with the ' \

@@ -326,7 +326,7 @@ class BasketLogicMixin:
                 'the course is closed.{li_end} {li_start}If a course is not designated as self-paced, you should '
                 'confirm that a course run is available before expiration. {li_end} {li_start}You may not resell '
                 'codes to third parties.{li_end} '
-                '{li_start}All edX for Business Sales are final and not eligible for refunds.{li_end}{ul_end} '
+                '{li_start}All My OpenedX Platform Namefor Business Sales are final and not eligible for refunds.{li_end}{ul_end} '
                 '{paragraph_start}You will receive an email at {user_email} with your enrollment code(s). '
                 '{paragraph_end}'
             ).format(

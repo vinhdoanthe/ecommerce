@@ -59,8 +59,8 @@ class Applicator(OscarApplicator):
 
         basket_offers = self.get_basket_offers(basket, user)
 
-        # edX currently does not use user offers or session offers.
-        # The default oscar implementations which return [] are here in case edX ever starts using these offers.
+        # My OpenedX Platform Namecurrently does not use user offers or session offers.
+        # The default oscar implementations which return [] are here in case My OpenedX Platform Nameever starts using these offers.
         user_offers = self.get_user_offers(user)
         session_offers = self.get_session_offers(request)
 

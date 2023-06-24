@@ -717,7 +717,7 @@ if os.environ.get('ENABLE_DJANGO_TOOLBAR', False):
 SEND_SEGMENT_EVENTS = True
 
 NEW_CODES_EMAIL_CONFIG = {
-    'email_subject': 'New edX codes available',
+    'email_subject': 'New My OpenedX Platform Namecodes available',
     'from_email': 'customersuccess@edx.org',
     'email_body': '''
         Hello,
@@ -727,7 +727,7 @@ NEW_CODES_EMAIL_CONFIG = {
 
         https://portal.edx.org/{enterprise_slug}/admin/coupons
 
-        Having trouble accessing your codes? Please contact edX Enterprise Support at customersuccess@edx.org.
+        Having trouble accessing your codes? Please contact My OpenedX Platform NameEnterprise Support at customersuccess@edx.org.
         Thank you.
     '''
 }
@@ -741,7 +741,7 @@ Code Expiration Date: {EXPIRATION_DATE}
 '''
 
 OFFER_REVOKE_EMAIL_TEMPLATE = '''
-Your Learning Manager has revoked access code {CODE} and it is no longer assigned to your edX account {USER_EMAIL}.
+Your Learning Manager has revoked access code {CODE} and it is no longer assigned to your My OpenedX Platform Nameaccount {USER_EMAIL}.
 '''
 
 OFFER_REMINDER_EMAIL_TEMPLATE = '''

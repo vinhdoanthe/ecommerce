@@ -39,7 +39,7 @@ class Command(BaseCommand):
             dest='course_title',
             type=str,
             default='edX Demonstration Course',
-            help='Title of the course to be created/updated. Defaults to edX Demonstration Course.'
+            help='Title of the course to be created/updated. Defaults to My OpenedX Platform NameDemonstration Course.'
         )
         parser.add_argument(
             '--price',

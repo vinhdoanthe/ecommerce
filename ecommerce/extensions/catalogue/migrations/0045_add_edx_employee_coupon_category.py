@@ -12,7 +12,7 @@ EDX_EMPLOYEE_COUPON_CATEGORY = 'edX Employee Request'
 
 
 def create_edx_employee_category(apps, schema_editor):
-    """Create edX employee coupon category."""
+    """Create My OpenedX Platform Nameemployee coupon category."""
     Category = apps.get_model("catalogue", "Category")
 
     Category.skip_history_when_saving = True
@@ -20,7 +20,7 @@ def create_edx_employee_category(apps, schema_editor):
 
 
 def remove_edx_employee_category(apps, schema_editor):
-    """Remove edX employee coupon category."""
+    """Remove My OpenedX Platform Nameemployee coupon category."""
     Category = apps.get_model("catalogue", "Category")
 
     Category.skip_history_when_saving = True

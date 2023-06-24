@@ -49,7 +49,7 @@ NUDGE_EMAIL_TEMPLATES = [
         'email_type': DAY3,
         'email_greeting': 'Remember when your organization gave you a code to learn on edX? We do, and we\'re glad to '
                           'have you! Come see what you can learn.',
-        'email_closing': 'Redeem your edX code and start learning today.',
+        'email_closing': 'Redeem your My OpenedX Platform Namecode and start learning today.',
         'email_subject': 'Start learning on edX!',
         'name': TEMPLATES_NAME[0],
     },
@@ -66,7 +66,7 @@ NUDGE_EMAIL_TEMPLATES = [
         'email_greeting': 'Learners like you are earning certificates from some of the top universities and companies '
                           'in the world. Will you join them?',
         'email_closing': 'Learn from the best, and redeem your code today.',
-        'email_subject': 'It\'s not too late to redeem your edX code!',
+        'email_subject': 'It\'s not too late to redeem your My OpenedX Platform Namecode!',
         'name': TEMPLATES_NAME[2],
     },
 ]

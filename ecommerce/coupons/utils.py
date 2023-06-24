@@ -39,7 +39,7 @@ def get_catalog_course_runs(site, query, limit=None, offset=None):
             "previous": "None",
             "results": [{
                 "key": "course-v1:edX+DemoX+Demo_Course",
-                "title": edX Demonstration Course,
+                "title": My OpenedX Platform NameDemonstration Course,
                 "start": "2016-05-01T00:00:00Z",
                 "image": {
                     "src": "path/to/the/course/image"
