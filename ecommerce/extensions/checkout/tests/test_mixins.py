@@ -310,7 +310,7 @@ class EdxOrderPlacementMixinTests(BusinessIntelligenceMixin, PaymentEventsMixin,
         # ensure that analytics.track was called, but the exception was caught
         self.assertTrue(mock_track.called)
         # ensure we logged a warning.
-        self.assertTrue(mock_log_exc.called_with("Failed to emit tracking event upon order placement."))
+        mock_log_exc.assert_called_with("Failed to emit tracking event upon order completion.")
 
     def test_handle_successful_async_order(self, __):
         """
@@ -432,6 +432,7 @@ class EdxOrderPlacementMixinTests(BusinessIntelligenceMixin, PaymentEventsMixin,
             'total': basket.total_incl_tax,
             'success': True,
             'processor_name': DummyProcessor.NAME,
+            'stripe_enabled': False,
         }
         calls.append(mock.call(user_tracking_id, 'Payment Processor Response', properties, context=context))
 
@@ -476,6 +477,7 @@ class EdxOrderPlacementMixinTests(BusinessIntelligenceMixin, PaymentEventsMixin,
             'payment_error': 'Exception',
             'success': False,
             'processor_name': DummyProcessor.NAME,
+            'stripe_enabled': False,
         }
         calls.append(mock.call(user_tracking_id, 'Payment Processor Response', properties, context=context))
 

@@ -223,6 +223,7 @@ MIDDLEWARE = (
     'corsheaders.middleware.CorsMiddleware',
     'edx_django_utils.monitoring.DeploymentMonitoringMiddleware',
     'edx_django_utils.cache.middleware.RequestCacheMiddleware',
+    'edx_django_utils.monitoring.CachedCustomMonitoringMiddleware',
     'edx_django_utils.monitoring.CookieMonitoringMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -309,6 +310,7 @@ DJANGO_APPS = [
     'django_filters',
     'release_util',
     'crispy_forms',
+    'crispy_bootstrap3',
     'solo',
     'social_django',
     'drf_yasg',
@@ -445,7 +447,7 @@ JWT_AUTH = {
     'JWT_AUTH_COOKIE': 'edx-jwt-cookie',
     'JWT_VERIFY_EXPIRATION': True,
     'JWT_LEEWAY': 1,
-    'JWT_DECODE_HANDLER': 'ecommerce.extensions.api.handlers.jwt_decode_handler',
+    'JWT_DECODE_HANDLER': 'edx_rest_framework_extensions.auth.jwt.decoder.jwt_decode_handler',
     # These settings are NOT part of DRF-JWT's defaults.
     'JWT_ISSUERS': [
         {
@@ -472,6 +474,13 @@ ECOMMERCE_SERVICE_WORKER_USERNAME = 'ecommerce_worker'
 
 # Worker user used by prospectus to query ecommerce
 PROSPECTUS_WORKER_USERNAME = 'prospectus_worker'
+
+# Worker used by Discovery to consume ecommerce endpoints
+DISCOVERY_WORKER_USERNAME = 'discovery_worker'
+
+# Worker used by subscriptions to consume ecommerce endpoints
+
+SUBSCRIPTIONS_SERVICE_WORKER_USERNAME = 'subscriptions_worker'
 
 # Used to access the Enrollment API. Set this to the same value used by the LMS.
 EDX_API_KEY = 'PUT_YOUR_API_KEY_HERE'
@@ -659,6 +668,7 @@ ENROLLMENT_FULFILLMENT_TIMEOUT = 7
 # Affiliate cookie key
 AFFILIATE_COOKIE_KEY = 'affiliate_id'
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap3'
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # ENTERPRISE CONFIGURATION
@@ -667,7 +677,7 @@ ENTERPRISE_SERVICE_URL = 'http://localhost:8000/enterprise/'
 # Cache enterprise response from Enterprise API.
 ENTERPRISE_API_CACHE_TIMEOUT = 300  # Value is in seconds
 
-ENTERPRISE_CATALOG_SERVICE_URL = 'http://localhost:18160/'
+ENTERPRISE_CATALOG_SERVICE_URL = 'http://enterprise.catalog.app:18160/'
 
 ENTERPRISE_ANALYTICS_API_URL = 'http://localhost:19001'
 
@@ -810,7 +820,25 @@ ECOMMERCE_PAYMENT_PROCESSOR_CONFIG = {
             'error_url': '/checkout/error/',
             'mode': 'sandbox',
             'receipt_url': '/checkout/receipt/'
-        }
+        },
+        'android-iap': {
+            'google_bundle_id': 'org.edx.mobile',
+            'google_service_account_key_file': 'SET-ME-PLEASE'
+        },
+        'ios-iap': {
+            'ios_bundle_id': 'org.edx.mobile',
+        },
+        'stripe': {
+            'api_version': '2022-08-01; server_side_confirmation_beta=v1',
+            'enable_telemetry': None,
+            'log_level': None,
+            'max_network_retries': 0,
+            'proxy': None,
+            'publishable_key': 'SET-ME-PLEASE',
+            'secret_key': 'SET-ME-PLEASE',
+            'webhook_endpoint_secret': 'SET-ME-PLEASE',
+            'receipt_url': '/checkout/receipt/',
+        },
     }
 }
 MEDIA_STORAGE_BACKEND = {

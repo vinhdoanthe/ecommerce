@@ -1,9 +1,11 @@
 -c constraints.txt
 
 analytics-python
+app-store-notifications-v2-validator==0.0.7
 bleach
 boto3>=1.17.80
 coreapi
+crispy-bootstrap3
 cybersource-rest-client-python
 django>=3.2,<4.0
 django-compressor
@@ -33,7 +35,11 @@ edx-opaque-keys
 edx-rbac
 edx-rest-api-client
 getsmarter-api-clients
+google-api-python-client==2.31.0
+httplib2==0.20.2
+inapppy==2.5.2
 jsonfield
+jsonfield2
 libsass==0.9.2
 markdown==2.6.9
 mysqlclient<1.5
@@ -52,7 +58,7 @@ rules
 simplejson
 social-auth-app-django
 sorl-thumbnail
-stripe==1.70.0
+stripe
 unicodecsv
 xss-utils
 zeep
