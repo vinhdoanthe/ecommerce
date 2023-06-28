@@ -12,7 +12,7 @@
 -c common_constraints.txt
 
 # Tests failing in test_cybersouce.py on version 0.0.23
-cybersource-rest-client-python==0.0.21
+# cybersource-rest-client-python==0.0.21
 
 # Django 3.2 support is added in version 2.2 so pinning it to 2.2
 django-oscar==2.2
